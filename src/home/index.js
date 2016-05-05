@@ -16,7 +16,7 @@ class HomeController{
     })
   }
   
-  getMovie(id){
+  handleGetMovieDetail(id){
     this.MovieService.getMovie(id)
       .then(movie =>{
         this.movie = movie.data;
