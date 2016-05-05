@@ -1,9 +1,15 @@
 /** @namespace this */
 
 class HomeController{
-  constructor( $state, MovieService ){
+  constructor( $state, $rootScope, $stateParams, MovieService ){
     this.state = $state;
     this.MovieService = MovieService;
+    this.stateParams = $stateParams;
+    
+    this.speed = 100;
+    this.listStyle = 'anim-slide-below-fade';
+    this.detailStyle = 'anim-slide-below-fade';
+
   }
   
   handleSearchMovies(input){
@@ -20,11 +26,10 @@ class HomeController{
     this.MovieService.getMovie(id)
       .then(movie =>{
         this.movie = movie.data;
-        console.log(this.movie);
     }).then(() =>{
       this.state.go('movies.detail');
     })
   }
 }
 
-export default [ '$state', 'MovieService', HomeController ]
+export default [ '$state', '$rootScope', '$stateParams', 'MovieService', HomeController ]

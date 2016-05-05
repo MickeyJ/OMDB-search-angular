@@ -25,9 +25,4 @@ const Router = (
   }
 );
 
-export default [
-  '$stateProvider',
-  '$urlRouterProvider',
-  '$locationProvider' ,
-  Router
-]
+export default [ '$stateProvider', '$urlRouterProvider', '$locationProvider' , Router ]

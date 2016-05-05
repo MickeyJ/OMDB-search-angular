@@ -1,4 +1,11 @@
-<section class="flex-col box">
+<section class="flex-col box {{vm.detailStyle}}"
+         ng-style="{
+         '-webkit-transition-duration': vm.speed + 'ms',
+         '-moz-transition-duration': vm.speed + 'ms',
+         '-ms-transition-duration': vm.speed + 'ms',
+         '-o-transition-duration': vm.speed + 'ms',
+         'transition-duration': vm.speed + 'ms'
+         }">
   <h2 ng-bind="vm.movie.Title"></h2>
   <article id="movieDetailBox" class="flex-row-no-wrap">
 
