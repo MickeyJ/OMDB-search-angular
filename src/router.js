@@ -19,7 +19,7 @@ const Router = (
         template: require('./home/_movies.detail.html')
       });
 
-    $urlRouterProvider.otherwise('/home/movies');
+    $urlRouterProvider.otherwise('/home');
     $locationProvider.html5Mode(true);
     console.log(process.env.NODE_ENV);
   }
