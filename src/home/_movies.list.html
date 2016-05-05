@@ -1,16 +1,16 @@
 
-<div class="flex-row movieListBox {{vm.listStyle}}"
-  ng-style="{
-  '-webkit-transition-duration': vm.speed + 'ms',
-  '-moz-transition-duration': vm.speed + 'ms',
-  '-ms-transition-duration': vm.speed + 'ms',
-  '-o-transition-duration': vm.speed + 'ms',
-  'transition-duration': vm.speed + 'ms'
-  }">
+<div class="flex-row movieListBox {{vm.transitionStyle}}"
+     ng-style="{
+     '-webkit-transition-duration': vm.speed + 'ms',
+     '-moz-transition-duration': vm.speed + 'ms',
+     '-ms-transition-duration': vm.speed + 'ms',
+     '-o-transition-duration': vm.speed + 'ms',
+     'transition-duration': vm.speed + 'ms'
+     }">
 
     <a class="col1-2 movieLink"
        ng-repeat="m in vm.movies"
-       ng-click="vm.handleGetMovieDetail(m.imdbID)">
+       ui-sref="movies.detail({id: m.imdbID})">
       {{m.Title}} - {{m.Year}}
     </a>
 </div>

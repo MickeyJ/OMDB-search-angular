@@ -1,4 +1,4 @@
-<section class="flex-col box {{vm.detailStyle}}"
+<section class="flex-col box {{vm.transitionStyle}}"
          ng-style="{
          '-webkit-transition-duration': vm.speed + 'ms',
          '-moz-transition-duration': vm.speed + 'ms',
@@ -69,7 +69,7 @@
     </div>
 
   </article>
-  <a class="btn btn-success" ui-sref="movies.list">
+  <a class="btn btn-success" href="javascript:history.back()">
     Go Back
   </a>
 </section>

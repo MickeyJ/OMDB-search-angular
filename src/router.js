@@ -1,3 +1,4 @@
+/** @namespace this */
 
 const Router = (
   ($stateProvider, $urlRouterProvider, $locationProvider) =>{
@@ -11,12 +12,31 @@ const Router = (
         template: require('./home/_movies.html')
       })
       .state('movies.list', {
-        url: 'movies',
-        template: require('./home/_movies.list.html')
+        url: 'movies/:search',
+        template: require('./home/_movies.list.html'),
+        controllerAs: 'vm',
+        controller: [ '$state', 'MovieService',
+          function($state, MovieService){
+            MovieService.getAllMovies($state.params.search)
+            .then(movies =>{
+              this.movies = movies.data.Search;
+              this.searchInput = null;
+            })
+          }
+        ]
       })
       .state('movies.detail', {
-        url: 'movie',
-        template: require('./home/_movies.detail.html')
+        url: 'movie/:id',
+        template: require('./home/_movies.detail.html'),
+        controllerAs: 'vm',
+        controller: [ '$state', 'MovieService',
+          function($state, MovieService){
+            MovieService.getMovie($state.params.id)
+            .then(movie =>{
+              this.movie = movie.data;
+            });
+  }
+        ]
       });
 
     $urlRouterProvider.otherwise('/');
