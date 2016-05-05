@@ -3,10 +3,18 @@
   h2{
     color: DodgerBlue;
   }
+  h3{
+    margin: 0.5%;
+  }
 
   .searchBox{
     width: 100%;
-    @extend %marg-sm-vert
+    border-bottom: 1px solid #ccc;
+
+    &:after{
+      content: "";
+      @extend %marg-sm-vert;
+    }
   }
   .searchInput{
     width: 300px;
@@ -21,7 +29,7 @@
     }
   }
 
-  .movieDetailBox{
+  #movieDetailBox{
     width: 55%;
     margin-bottom: 1%;
 
@@ -44,6 +52,8 @@
 
     .infoItemContent{
       margin-left: 3%;
+      font-weight: 200;
+      font-size: 1.2em;
     }
   }
 
@@ -53,9 +63,9 @@
   }
 
   .movieLink{
-    height: 200px;
+    height: 150px;
     text-align: center;
-    line-height: 200px;
+    line-height: 150px;
     font-size: 1.2em;
     color: black;
     background: rgba(29, 136, 225, 0.12);

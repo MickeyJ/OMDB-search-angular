@@ -1,12 +1,11 @@
 /** @namespace this */
 
 class HomeController{
-  constructor($state, MovieService){
+  constructor($scope, $state, MovieService){
     this.state = $state;
     this.MovieService = MovieService;
-    this.title = 'Search Movie Titles!';
   }
-  handleMovieSearch(inputText){
+  searchMovie(inputText){
     this.MovieService.getAllMovies(inputText)
       .then(movies =>{
         this.movies = movies.data.Search;
@@ -27,4 +26,4 @@ class HomeController{
   
 }
 
-export default ['$state', 'MovieService', HomeController ]
+export default ['$scope', '$state', 'MovieService', HomeController ]

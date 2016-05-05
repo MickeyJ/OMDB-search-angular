@@ -1,15 +1,17 @@
 <div id="home-page">
 
   <section class="flex-col searchBox">
-    <h3 ng-bind="vm.title"></h3>
-    <form class="form-inline" ng-submit="vm.handleMovieSearch(vm.searchInput)" >
+    <h3>Search Movie Titles!</h3>
+    <form class="form-inline" ng-submit="vm.searchMovie(vm.searchInput)" >
       <input
         type="text"
         class="form-control searchInput"
         placeholder="Search Movies"
         ng-model="vm.searchInput"
       />
-      <button class="btn btn-primary" type="submit">Search Movies</button>
+      <button class="btn btn-primary" type="submit">
+        Search
+      </button>
     </form >
   </section>
 
