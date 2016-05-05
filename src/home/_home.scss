@@ -4,4 +4,69 @@
     color: DodgerBlue;
   }
 
+  .searchBox{
+    width: 100%;
+    @extend %marg-sm-vert
+  }
+  .searchInput{
+    width: 300px;
+  }
+
+  .movieListBox{
+    width: 80%;
+    margin: 0 auto;
+
+    a{
+      @extend %marg-sm-vert
+    }
+  }
+
+  .movieDetailBox{
+    width: 55%;
+    margin-bottom: 1%;
+
+    .infoList{
+      max-height: 450px;
+      padding: 0 2%;
+      line-height: 150%;
+      overflow: auto;
+    }
+
+    .infoItemBox{
+      border-bottom: 1px solid #bdbdbd;
+    }
+
+    .infoItemTitle{
+      border-bottom: 0.1px solid #dadada;
+      font-weight: 500;
+      color: #747474;
+    }
+
+    .infoItemContent{
+      margin-left: 3%;
+    }
+  }
+
+  .moviePoster{
+    min-height: 450px;
+    @include border-radius(5px);
+  }
+
+  .movieLink{
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 1.2em;
+    color: black;
+    background: rgba(29, 136, 225, 0.12);
+    border: 1px solid #ccc;
+    @include border-radius(10px);
+    @include transition(all 0.05s);
+
+    &:hover{
+      color: #ff641c;
+      text-decoration: none;
+    }
+  }
+
 }

@@ -1,16 +1,17 @@
 <div id="home-page">
 
-  <h2 ng-bind="vm.title"></h2>
-
-  <form class="form-inline" ng-submit="vm.handleMovieSearch(vm.searchInput)" >
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Search Movies"
-      ng-model="vm.searchInput"
-    />
-    <button class="btn btn-primary" type="submit">Search Movies</button>
-  </form >
+  <section class="flex-col searchBox">
+    <h3 ng-bind="vm.title"></h3>
+    <form class="form-inline" ng-submit="vm.handleMovieSearch(vm.searchInput)" >
+      <input
+        type="text"
+        class="form-control searchInput"
+        placeholder="Search Movies"
+        ng-model="vm.searchInput"
+      />
+      <button class="btn btn-primary" type="submit">Search Movies</button>
+    </form >
+  </section>
 
   <div ui-view></div>
 

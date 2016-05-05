@@ -1,6 +1,68 @@
-<div>
-  <h3 ng-bind="vm.movie.Title"></h3>
-  <img ng-src="{{vm.movie.Poster}}" class="img-responsive" alt="{{vm.movie.Title}}" />
-  <p>Year - {{vm.movie.Year}}</p>
-  <a ui-sref="movies.list">Go Back</a>
-</div>
+<section class="flex-col box">
+  <h2 ng-bind="vm.movie.Title"></h2>
+  <article class="flex-row-no-wrap movieDetailBox">
+
+    <div class="col1-2">
+      <img
+        ng-src="{{vm.movie.Poster}}"
+        class="img-responsive moviePoster"
+        alt="{{vm.movie.Title}}"
+      />
+    </div>
+
+    <div class="col1-2 infoList">
+      <div class="infoItemBox">
+        <span class="infoItemTitle">IMDB Rating</span>
+        <p class="infoItemContent">{{vm.movie.imdbRating}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">IMDB Votes</span>
+        <p class="infoItemContent">{{vm.movie.imdbVotes}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Genre</span>
+        <p class="infoItemContent">{{vm.movie.Genre}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Runtime</span>
+        <p class="infoItemContent">{{vm.movie.Runtime}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Country</span>
+        <p class="infoItemContent">{{vm.movie.Country}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Rated</span>
+        <p class="infoItemContent">{{vm.movie.Rated}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Actors</span>
+        <p class="infoItemContent">{{vm.movie.Actors}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Director</span>
+        <p class="infoItemContent">{{vm.movie.Director}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Writer</span>
+        <p class="infoItemContent">{{vm.movie.Writer}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Year</span>
+        <p class="infoItemContent">{{vm.movie.Year}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Release Date</span>
+        <p class="infoItemContent">{{vm.movie.Released}}</p>
+      </div>
+      <div class="infoItemBox">
+        <span class="infoItemTitle">Plot</span>
+        <p class="infoItemContent">{{vm.movie.Plot}}</p>
+      </div>
+    </div>
+
+  </article>
+  <a class="btn btn-success" ui-sref="movies.list">
+    Go Back
+  </a>
+</section>

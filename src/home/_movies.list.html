@@ -1,6 +1,10 @@
 
-<ul>
-  <li ng-repeat="m in vm.movies">
-    <a ng-click="vm.getMovie(m.imdbID)" ng-bind="m.Title"></a>
-  </li>
-</ul>
+
+<div class="flex-row movieListBox">
+    <a
+      ng-repeat="m in vm.movies"
+      ng-click="vm.getMovie(m.imdbID)"
+      ng-bind="m.Title"
+      class="col1-2 movieLink">
+    </a>
+</div>

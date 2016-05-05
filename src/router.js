@@ -4,22 +4,22 @@ const Router = (
     
     $stateProvider
       .state('movies', {
-        url: '/',
+        url: '/home',
         scope: true,
         controllerAs: "vm",
         controller: 'HomeController',
         template: require('./home/_movies.html')
       })
       .state('movies.list', {
-        url: 'movies',
+        url: '/movies',
         template: require('./home/_movies.list.html')
       })
       .state('movies.detail', {
-        url: 'movie',
+        url: '/movie',
         template: require('./home/_movies.detail.html')
       });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home/movies');
     $locationProvider.html5Mode(true);
     console.log(process.env.NODE_ENV);
   }

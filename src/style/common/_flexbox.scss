@@ -1,0 +1,49 @@
+.flex-row{
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(space-around);
+}
+
+.flex-row-no-wrap{
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(no-wrap);
+  //@include align-items(base-line);
+}
+
+.flex-col{
+  @include display(flex);
+  @include flex-direction(column);
+  @include flex-wrap(no-wrap);
+  @include align-items(center);
+}
+
+
+.col1-2{
+  @include makeRow(2, 2vw);
+}
+
+
+.col1-3{
+  @include makeRow(3, 2vw);
+}
+.col2-3{
+  @include makeRow(1.5, 2vw);
+}
+
+
+.col1-4{
+  @include makeRow(4, 2vw);
+}
+.col3-4{
+  @include makeRow((4/3), 2vw);
+}
+
+
+.col1-6{
+  @include makeRow(6, 2vw);
+}
+.col5-6{
+  @include makeRow((6/5), 2vw);
+}
