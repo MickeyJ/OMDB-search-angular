@@ -11,7 +11,8 @@ class HomeController{
       .then(movies =>{
         this.movies = movies.data.Search;
         this.searchInput = null;
-        this.state.go('movies.list');
+    }).then(() =>{
+      this.state.go('movies.list');
     })
   }
   getMovie(id){
@@ -19,8 +20,9 @@ class HomeController{
       .then(movie =>{
         this.movie = movie.data;
         console.log(this.movie);
-        this.state.go('movies.detail');
-      })
+    }).then(() =>{
+      this.state.go('movies.detail');
+    })
   }
   
 }
