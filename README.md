@@ -24,7 +24,7 @@ $ npm run stage
     
 ```
 
-Production (actually build the bundle and serve it up and deploy with Express) [:3000](http://localhost:3000/)
+Production (actually build the bundle and serve it up with Express) [:3000](http://localhost:3000/)
 
 ```bash
   
